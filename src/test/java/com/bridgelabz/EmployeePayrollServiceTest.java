@@ -28,7 +28,20 @@ public class EmployeePayrollServiceTest {
         EmployeePayrollService employeePayrollService=new EmployeePayrollService();
         List<EmployeeData> employee = employeePayrollService.retrieveData();
         employeePayrollService.updateSalary();
+    }
+    //Test Case To Check Whether Salary Is Updated Or Not In Database Using prepared Statement
+    @Test
+    public void updateSalaryFromDBusing_prepareStatement() {
+        EmployeePayrollService employeePayRollService=new EmployeePayrollService();
+        employeePayRollService.updateUsing_PreparedStatement("Terisa");
 
+    }
+
+    //Test Case To Retrieve Data Between Mentioned Range
+    @Test
+    public void retrieveData_betweenRange() {
+        EmployeePayrollService employeePayRollService=new EmployeePayrollService();
+        employeePayRollService.retrieveData_inBetween_Range();
     }
 
 }
